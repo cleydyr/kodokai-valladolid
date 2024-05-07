@@ -1,0 +1,10 @@
+title: Kodokai Valladolid
+email: cdkodokaivalladolid@gmail.com
+description: >- # this means to ignore newlines until "baseurl:"
+  Experimenta la armonía y la disciplina en nuestro dojo de Aikido, donde la tradición japonesa se encuentra con la filosofía del autocontrol. En nuestro espacio acogedor, ofrecemos clases guiadas por instructores altamente calificados que no solo enseñan las técnicas del Aikido, sino también cultivan un ambiente de respeto mutuo. Descubre la belleza de este arte marcial no competitivo mientras trabajas en el desarrollo físico, mental y espiritual. ¡Únete a nosotros para explorar el camino del Aikido y construir una comunidad comprometida con el crecimiento personal y la conexión humana!"
+baseurl: "" # the subpath of your site, e.g. /blog
+# Build settings
+theme: jekyll-athena
+
+domain: kodokai-valladolid.github.io
+url: https://kodokai.github.io
