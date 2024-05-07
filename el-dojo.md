@@ -3,7 +3,7 @@ layout: page
 title: El Dojo
 ---
 
-|![inscripción en japonés](/assets/images/inscripción%20japonés.jpg)| "La forma está en el vacío" "En el vacío está la forma"|
+|![inscripción en japonés](/assets/images/inscripcion_japones.jpg)| "La forma está en el vacío" "En el vacío está la forma"|
 
 ### AIKIDO
 
