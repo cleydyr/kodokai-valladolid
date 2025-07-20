@@ -1,30 +1,30 @@
-# Harmony Aikido Dojo Website
+# Sitio Web Aikido Kodokai Valladolid
 
-A beautiful, responsive website for an Aikido dojo featuring traditional Japanese aesthetics and modern web design.
+Un hermoso sitio web responsivo para un dojo de Aikido con estética japonesa tradicional y diseño web moderno.
 
-## 🥋 About
+## 🥋 Acerca de
 
-This website showcases Harmony Aikido Dojo, designed with warm, natural colors inspired by traditional Japanese dojo environments. The site features rich autumn reds, warm wood tones, and clean whites that create a serene and welcoming atmosphere.
+Este sitio web presenta Aikido Kodokai Valladolid, diseñado con colores cálidos y naturales inspirados en ambientes tradicionales de dojos japoneses. El sitio presenta rojos otoñales ricos, tonos de madera cálidos y blancos limpios que crean una atmósfera serena y acogedora.
 
-## 🌟 Features
+## 🌟 Características
 
-- **Responsive Design**: Optimized for desktop, tablet, and mobile devices
-- **Traditional Aesthetics**: Color palette inspired by authentic dojo environments
-- **Interactive Elements**: FAQ accordion, mobile navigation, smooth animations
-- **Complete Information**: Training programs, instructor details, contact forms
-- **Modern Performance**: Fast loading, smooth scrolling, optimized images
+- **Diseño Responsivo**: Optimizado para escritorio, tablet y dispositivos móviles
+- **Estética Tradicional**: Paleta de colores inspirada en ambientes auténticos de dojos
+- **Elementos Interactivos**: Acordeón FAQ, navegación móvil, animaciones suaves
+- **Información Completa**: Programas de entrenamiento, detalles de instructores, formularios de contacto
+- **Rendimiento Moderno**: Carga rápida, desplazamiento suave, imágenes optimizadas
 
-## 📱 Pages
+## 📱 Páginas
 
-- **Home**: Welcome page with hero section and dojo overview
-- **About**: Dojo history, philosophy, and instructor information
-- **Training**: Comprehensive program details from beginner to advanced
-- **FAQ**: Interactive frequently asked questions
-- **Contact**: Contact form, schedule, and location information
+- **Inicio**: Página de bienvenida con sección hero y resumen del dojo
+- **Nosotros**: Historia del dojo, filosofía e información de instructores
+- **Entrenamientos**: Detalles completos de programas desde principiante hasta avanzado
+- **FAQ**: Preguntas frecuentes interactivas
+- **Contacto**: Formulario de contacto, horarios e información de ubicación
 
-## 🚀 Live Demo
+## 🚀 Demo en Vivo
 
-Visit the live site: [Harmony Aikido Dojo](https://yourusername.github.io/harmony-aikido-dojo)
+Visita el sitio en vivo: [Aikido Kodokai Valladolid](https://yourusername.github.io/aikido-kodokai-valladolid)
 
 ## 🛠️ Technologies Used
 

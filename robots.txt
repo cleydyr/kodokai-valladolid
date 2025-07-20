@@ -1,0 +1,22 @@
+User-agent: *
+Allow: /
+
+# Sitemap
+Sitemap: https://yourusername.github.io/aikido-kodokai-valladolid/sitemap.xml
+
+# Disallow specific files
+Disallow: /README.md
+Disallow: /LICENSE
+Disallow: /CONTRIBUTING.md
+Disallow: /.github/
+Disallow: /.git/
+Disallow: /.gitignore
+
+# Allow important pages
+Allow: /index.html
+Allow: /about.html
+Allow: /modalities.html
+Allow: /faq.html
+Allow: /contact.html
+Allow: /styles.css
+Allow: /script.js
