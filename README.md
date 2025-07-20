@@ -22,10 +22,6 @@ Este sitio web presenta Aikido Kodokai Valladolid, diseñado con colores cálido
 - **FAQ**: Preguntas frecuentes interactivas
 - **Contacto**: Formulario de contacto, horarios e información de ubicación
 
-## 🚀 Demo en Vivo
-
-Visita el sitio en vivo: [Aikido Kodokai Valladolid](https://yourusername.github.io/aikido-kodokai-valladolid)
-
 ## 🛠️ Technologies Used
 
 - HTML5
@@ -41,7 +37,7 @@ Visita el sitio en vivo: [Aikido Kodokai Valladolid](https://yourusername.github
 1. Clone the repository:
 
 ```bash
-git clone https://github.com/yourusername/harmony-aikido-dojo.git
+git clone https://github.com/cleydyr/kodokai-valladolid.git
 cd harmony-aikido-dojo
 ```
 
@@ -69,7 +65,7 @@ This site is configured for automatic deployment to GitHub Pages:
 3. Navigate to "Pages" section
 4. Select "Deploy from a branch"
 5. Choose `main` branch and `/ (root)` folder
-6. Your site will be available at `https://yourusername.github.io/repository-name`
+6. Your site will be available at `https://cleydyr.github.io/kodokai-valladolid`
 
 ## 🎨 Design Philosophy
 
@@ -107,19 +103,12 @@ harmony-aikido-dojo/
 
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
 
-## 📞 Contact
-
-For questions about the website or Aikido training:
-
-- **Email**: info@harmonyaikido.com
-- **Phone**: (555) 123-AIKI (2454)
-- **Address**: 123 Harmony Way, Peaceful Valley, CA 94000
-
 ## 🙏 Acknowledgments
 
 - Inspired by traditional Japanese dojo design
 - Built with modern web standards and accessibility in mind
 - Designed for the Aikido community with respect for martial arts traditions
+
 
 ---
 
