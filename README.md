@@ -1,6 +1,6 @@
 # Sitio Web Aikido Kodokai Valladolid
 
-Un hermoso sitio web responsivo para un dojo de Aikido con estética japonesa tradicional y diseño web moderno.
+Un hermoso sitio web responsivo para un Dojo de Aikido con estética japonesa tradicional y diseño web moderno.
 
 ## 🥋 Acerca de
 
@@ -108,7 +108,6 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 - Inspired by traditional Japanese dojo design
 - Built with modern web standards and accessibility in mind
 - Designed for the Aikido community with respect for martial arts traditions
-
 
 ---
 
