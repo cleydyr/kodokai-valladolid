@@ -525,3 +525,30 @@ body {
     text-align: left;
   }
 }
+/* Logo styles */
+.logo-image {
+  height: 50px;
+  width: auto;
+  max-width: 200px;
+  object-fit: contain;
+  transition: transform 0.3s ease;
+}
+
+.logo-image:hover {
+  transform: scale(1.05);
+}
+
+/* Responsive logo adjustments */
+@media screen and (max-width: 768px) {
+  .logo-image {
+    height: 40px;
+    max-width: 150px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .logo-image {
+    height: 35px;
+    max-width: 120px;
+  }
+}
