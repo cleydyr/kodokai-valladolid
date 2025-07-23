@@ -552,3 +552,32 @@ body {
     max-width: 120px;
   }
 }
+/* Philosophy Highlight Box Animation */
+@keyframes float {
+  0%,
+  100% {
+    transform: translateY(0px) rotate(0deg);
+  }
+  50% {
+    transform: translateY(-20px) rotate(180deg);
+  }
+}
+
+/* Responsive adjustments for philosophy box */
+@media screen and (max-width: 768px) {
+  .philosophy-highlight-box blockquote {
+    font-size: 1.5rem !important;
+    letter-spacing: 1px !important;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .philosophy-highlight-box blockquote {
+    font-size: 1.2rem !important;
+    letter-spacing: 0.5px !important;
+  }
+
+  .philosophy-highlight-box {
+    padding: 2rem 1rem !important;
+  }
+}
