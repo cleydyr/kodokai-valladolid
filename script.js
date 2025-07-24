@@ -111,3 +111,74 @@ document.addEventListener("DOMContentLoaded", () => {
     observer.observe(el);
   });
 });
+// Carousel functionality
+let currentSlideIndex = 0;
+const slides = document.querySelectorAll(".carousel-slide");
+const indicators = document.querySelectorAll(".indicator");
+
+function showSlide(index) {
+  // Hide all slides
+  slides.forEach((slide) => slide.classList.remove("active"));
+  indicators.forEach((indicator) => indicator.classList.remove("active"));
+
+  // Show current slide
+  if (slides[index]) {
+    slides[index].classList.add("active");
+    indicators[index].classList.add("active");
+  }
+}
+
+function changeSlide(direction) {
+  currentSlideIndex += direction;
+
+  if (currentSlideIndex >= slides.length) {
+    currentSlideIndex = 0;
+  } else if (currentSlideIndex < 0) {
+    currentSlideIndex = slides.length - 1;
+  }
+
+  showSlide(currentSlideIndex);
+}
+
+function currentSlide(index) {
+  currentSlideIndex = index - 1;
+  showSlide(currentSlideIndex);
+}
+
+// Auto-advance carousel every 5 seconds
+if (slides.length > 0) {
+  setInterval(() => {
+    changeSlide(1);
+  }, 5000);
+}
+
+// Touch/swipe support for mobile
+let startX = 0;
+let endX = 0;
+
+document.addEventListener("touchstart", (e) => {
+  startX = e.changedTouches[0].screenX;
+});
+
+document.addEventListener("touchend", (e) => {
+  endX = e.changedTouches[0].screenX;
+  handleSwipe();
+});
+
+function handleSwipe() {
+  const carousel = document.querySelector(".carousel-container");
+  if (!carousel) return;
+
+  const threshold = 50;
+  const diff = startX - endX;
+
+  if (Math.abs(diff) > threshold) {
+    if (diff > 0) {
+      // Swipe left - next slide
+      changeSlide(1);
+    } else {
+      // Swipe right - previous slide
+      changeSlide(-1);
+    }
+  }
+}
