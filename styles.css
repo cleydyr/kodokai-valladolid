@@ -97,7 +97,7 @@ body {
 /* Hero section */
 .hero {
   background: linear-gradient(rgba(139, 69, 19, 0.7), rgba(160, 82, 45, 0.7)),
-    url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 600"><rect fill="%23f8f6f3" width="1200" height="600"/><circle fill="%23dc143c" opacity="0.1" cx="200" cy="150" r="80"/><circle fill="%238b4513" opacity="0.1" cx="800" cy="300" r="120"/><rect fill="%23a0522d" opacity="0.1" x="0" y="400" width="1200" height="200"/></svg>');
+    url("assets/images/hero-background.svg");
   background-size: cover;
   background-position: center;
   height: 100vh;
@@ -404,7 +404,7 @@ body {
   left: 0;
   right: 0;
   bottom: 0;
-  background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><circle fill="%23dc143c" opacity="0.03" cx="20" cy="20" r="15"/><circle fill="%238b4513" opacity="0.03" cx="80" cy="80" r="20"/></svg>');
+  background: url("assets/images/zen-pattern.svg");
   background-size: 200px 200px;
   pointer-events: none;
 }
