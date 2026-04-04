@@ -755,3 +755,147 @@ site-navbar {
     padding: 60px 0;
   }
 }
+
+/* Schedule page (Horarios) */
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+.schedule-section .schedule-legend {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem 1.5rem;
+  margin: 1.5rem 0;
+  font-family: system-ui, -apple-system, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  font-size: 0.9rem;
+  color: #4a4a4a;
+}
+
+.schedule-legend-item {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+}
+
+.schedule-dot {
+  display: inline-block;
+  width: 0.65rem;
+  height: 0.65rem;
+  border-radius: 50%;
+  flex-shrink: 0;
+}
+
+.schedule-dot.schedule-class-aikido {
+  background-color: #c41e3a;
+}
+
+.schedule-dot.schedule-class-kids {
+  background-color: #1e5f9e;
+}
+
+.schedule-dot.schedule-class-weapons {
+  background-color: #7c2d8a;
+}
+
+.schedule-dot.schedule-class-meditation {
+  background-color: #1b4d2e;
+}
+
+.schedule-scroll {
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+  margin-top: 1rem;
+  padding-bottom: 0.5rem;
+  border-radius: 8px;
+  outline: none;
+}
+
+.schedule-scroll:focus-visible {
+  box-shadow: 0 0 0 3px rgba(220, 20, 60, 0.35);
+}
+
+.schedule-table {
+  width: 100%;
+  min-width: 640px;
+  border-collapse: separate;
+  border-spacing: 6px;
+  font-family: system-ui, -apple-system, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  font-size: 0.9rem;
+  text-align: center;
+}
+
+.schedule-table thead th {
+  background: linear-gradient(180deg, #c9a227 0%, #b8922a 100%);
+  color: #2c2418;
+  font-weight: 600;
+  padding: 0.85rem 0.5rem;
+  border-radius: 6px;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.06);
+}
+
+.schedule-table tbody th.schedule-col-time,
+.schedule-table thead th.schedule-col-time {
+  background: linear-gradient(180deg, #e8dcc8 0%, #dfd2bc 100%);
+  color: #2c2418;
+  font-weight: 600;
+}
+
+.schedule-table tbody th.schedule-col-time {
+  min-width: 7.5rem;
+}
+
+.schedule-table td {
+  background-color: #faf8f5;
+  color: #2c2c2c;
+  padding: 0.85rem 0.6rem;
+  vertical-align: middle;
+  border-radius: 6px;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.04);
+  line-height: 1.35;
+}
+
+.schedule-table .schedule-cell-empty {
+  background-color: #f3f0eb;
+}
+
+.schedule-class {
+  font-weight: 600;
+  display: inline-block;
+  max-width: 14rem;
+}
+
+.schedule-class-aikido {
+  color: #b91c3c;
+}
+
+.schedule-class-kids {
+  color: #1e5f9e;
+}
+
+.schedule-class-weapons {
+  color: #7c2d8a;
+}
+
+.schedule-class-meditation {
+  color: #1b4d2e;
+}
+
+@media screen and (max-width: 768px) {
+  .schedule-table {
+    font-size: 0.8rem;
+  }
+
+  .schedule-table td,
+  .schedule-table thead th,
+  .schedule-table tbody th.schedule-col-time {
+    padding: 0.65rem 0.4rem;
+  }
+}

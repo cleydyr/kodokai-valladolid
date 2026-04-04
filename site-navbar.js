@@ -2,6 +2,7 @@ const NAV_ITEMS = [
   { id: "index", href: "index.html", label: "Inicio" },
   { id: "about", href: "about.html", label: "Nosotros" },
   { id: "modalities", href: "modalities.html", label: "Entrenamientos" },
+  { id: "horarios", href: "horarios.html", label: "Horarios" },
   { id: "aiki-kids", href: "aiki-kids.html", label: "Aiki Kids" },
   { id: "faq", href: "faq.html", label: "Preguntas frecuentes" },
   { id: "contact", href: "contact.html", label: "Contacto" },
