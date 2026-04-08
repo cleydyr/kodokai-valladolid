@@ -1,0 +1,10 @@
+{
+  "name": "kodokai-valladolid",
+  "private": true,
+  "scripts": {
+    "dev": "live-server --open=/index.html --port=5173"
+  },
+  "devDependencies": {
+    "live-server": "^1.2.2"
+  }
+}
