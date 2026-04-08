@@ -101,7 +101,7 @@ const observer = new IntersectionObserver((entries) => {
 // Apply fade-in animation to content sections
 document.addEventListener("DOMContentLoaded", () => {
   const animatedElements = document.querySelectorAll(
-    ".content-section, .feature-card, .faq-item"
+    ".content-section, .feature-card, .faq-item, .gallery-item"
   );
 
   animatedElements.forEach((el) => {
