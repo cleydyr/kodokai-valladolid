@@ -15,25 +15,26 @@ class SiteNavbar extends HTMLElement {
     const active = this.getAttribute("active") || "";
     const itemsHtml = NAV_ITEMS.map((item) => {
       const activeClass = item.id === active ? " active" : "";
+      const ariaCurrent = item.id === active ? ' aria-current="page"' : "";
       return `<li class="nav-item">
-          <a href="${item.href}" class="nav-link${activeClass}">${item.label}</a>
+          <a href="${item.href}" class="nav-link${activeClass}"${ariaCurrent}>${item.label}</a>
         </li>`;
     }).join("");
 
     this.innerHTML = `
-  <nav class="navbar">
+  <nav class="navbar" aria-label="Principal">
     <div class="nav-container">
-      <div class="nav-logo">
-        <img src="assets/images/logo-transparent.png" alt="Kodokai Valladolid Logo" class="logo-image">
-      </div>
-      <ul class="nav-menu">
+      <a href="index.html" class="nav-logo">
+        <img src="assets/images/logo-transparent.png" alt="Kodokai Valladolid" class="logo-image">
+      </a>
+      <ul class="nav-menu" id="primary-nav">
         ${itemsHtml}
       </ul>
-      <div class="hamburger">
-        <span class="bar"></span>
-        <span class="bar"></span>
-        <span class="bar"></span>
-      </div>
+      <button type="button" class="hamburger" aria-label="Abrir menú" aria-controls="primary-nav" aria-expanded="false">
+        <span class="bar" aria-hidden="true"></span>
+        <span class="bar" aria-hidden="true"></span>
+        <span class="bar" aria-hidden="true"></span>
+      </button>
     </div>
   </nav>`;
   }
