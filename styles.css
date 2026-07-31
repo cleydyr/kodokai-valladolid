@@ -5,8 +5,14 @@
   box-sizing: border-box;
 }
 
+:root {
+  --nav-bar-height: 70px;
+  --nav-offset: calc(var(--nav-bar-height) + env(safe-area-inset-top, 0px));
+}
+
 html {
   overflow-x: clip;
+  scroll-padding-top: var(--nav-offset);
 }
 
 body {
@@ -40,6 +46,7 @@ site-navbar {
   top: 0;
   width: 100%;
   z-index: 1000;
+  padding-top: env(safe-area-inset-top, 0px);
 }
 
 .nav-container {
@@ -49,7 +56,7 @@ site-navbar {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  height: 70px;
+  height: var(--nav-bar-height);
 }
 
 .nav-logo {
@@ -134,10 +141,12 @@ site-navbar {
   min-height: 100svh;
   display: flex;
   align-items: center;
+  align-items: safe center;
   justify-content: center;
   text-align: center;
   color: white;
-  padding: 5.5rem 0 3rem;
+  padding: calc(var(--nav-offset) + 1.5rem) 0 3rem;
+  box-sizing: border-box;
 }
 
 .hero-content {
@@ -250,7 +259,7 @@ site-navbar {
 .page-header {
   background: linear-gradient(135deg, #8b4513, #a0522d);
   color: white;
-  padding: 120px 0 60px;
+  padding: calc(var(--nav-offset) + 3.5rem) 0 3.75rem;
   text-align: center;
 }
 
@@ -258,6 +267,7 @@ site-navbar {
   font-size: 3rem;
   font-weight: 300;
   margin-bottom: 1rem;
+  scroll-margin-top: var(--nav-offset);
 }
 
 .page-content {
@@ -453,15 +463,15 @@ site-navbar {
   .nav-menu {
     position: fixed;
     left: -100%;
-    top: 70px;
+    top: var(--nav-offset);
     flex-direction: column;
     align-items: stretch;
     gap: 0;
     background: linear-gradient(135deg, #8b4513, #a0522d);
     width: 100%;
     max-width: 100vw;
-    height: calc(100vh - 70px);
-    height: calc(100dvh - 70px);
+    height: calc(100vh - var(--nav-offset));
+    height: calc(100dvh - var(--nav-offset));
     overflow-y: auto;
     -webkit-overflow-scrolling: touch;
     text-align: center;
@@ -514,7 +524,14 @@ site-navbar {
 
   .hero {
     min-height: 100svh;
-    padding: 5.5rem 1rem 2.5rem;
+    padding: calc(var(--nav-offset) + 1.25rem) 1rem 2.5rem;
+    align-items: flex-start;
+    justify-content: center;
+  }
+
+  .hero-content {
+    margin-top: auto;
+    margin-bottom: auto;
   }
 
   .hero-content h1 {
