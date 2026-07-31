@@ -53,6 +53,11 @@ temp/
 # Build outputs
 dist/
 build/
+_site/
+
+# Jekyll
+.jekyll-cache/
+.jekyll-metadata
 
 # Cache directories
 .cache/
