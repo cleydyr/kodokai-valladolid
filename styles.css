@@ -197,6 +197,11 @@ site-navbar {
   box-shadow: 0 6px 20px rgba(220, 20, 60, 0.4);
 }
 
+.cta-button:focus-visible {
+  outline: 3px solid #ffd6d6;
+  outline-offset: 3px;
+}
+
 /* Features section */
 .features {
   padding: 80px 0;
@@ -524,7 +529,8 @@ site-navbar {
 
   .hero {
     min-height: 100svh;
-    padding: calc(var(--nav-offset) + 1.25rem) 1rem 2.5rem;
+    padding: calc(var(--nav-offset) + 1.25rem) 1rem
+      calc(5.5rem + env(safe-area-inset-bottom, 0px));
     align-items: flex-start;
     justify-content: center;
   }
@@ -550,6 +556,45 @@ site-navbar {
     font-size: 1.05rem;
     margin-bottom: 1.5rem;
     line-height: 1.55;
+  }
+
+  /* Sticky home CTA — always reachable on small screens */
+  .cta-button--home {
+    position: fixed;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 900;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    min-height: 52px;
+    margin: 0;
+    padding: 0.95rem 1.25rem
+      calc(0.95rem + env(safe-area-inset-bottom, 0px));
+    border-radius: 0;
+    font-size: 1.05rem;
+    font-weight: 500;
+    letter-spacing: 0.02em;
+    box-shadow: 0 -6px 24px rgba(0, 0, 0, 0.22);
+    transform: none;
+    transition: transform 0.25s ease, opacity 0.25s ease, box-shadow 0.25s ease;
+  }
+
+  .cta-button--home:hover {
+    transform: none;
+    box-shadow: 0 -6px 28px rgba(0, 0, 0, 0.28);
+  }
+
+  body.nav-open .cta-button--home {
+    opacity: 0;
+    pointer-events: none;
+    transform: translateY(100%);
+  }
+
+  body:has(.cta-button--home) .footer {
+    padding-bottom: calc(2rem + 52px + env(safe-area-inset-bottom, 0px));
   }
 
   .page-header h1 {
@@ -580,7 +625,7 @@ site-navbar {
     font-size: 1rem;
   }
 
-  .hero-content .hero-lead {
+  .hero-content p {
     font-size: 1rem;
   }
 
