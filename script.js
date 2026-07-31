@@ -2,18 +2,29 @@
 const hamburger = document.querySelector(".hamburger");
 const navMenu = document.querySelector(".nav-menu");
 
-hamburger.addEventListener("click", () => {
-  hamburger.classList.toggle("active");
-  navMenu.classList.toggle("active");
-});
+function setMenuOpen(isOpen) {
+  if (!hamburger || !navMenu) return;
 
-// Close mobile menu when clicking on a link
-document.querySelectorAll(".nav-link").forEach((n) =>
-  n.addEventListener("click", () => {
-    hamburger.classList.remove("active");
-    navMenu.classList.remove("active");
-  })
-);
+  hamburger.classList.toggle("active", isOpen);
+  navMenu.classList.toggle("active", isOpen);
+  hamburger.setAttribute("aria-expanded", String(isOpen));
+  hamburger.setAttribute("aria-label", isOpen ? "Cerrar menú" : "Abrir menú");
+  document.body.classList.toggle("nav-open", isOpen);
+}
+
+if (hamburger && navMenu) {
+  hamburger.addEventListener("click", () => {
+    setMenuOpen(!navMenu.classList.contains("active"));
+  });
+
+  document.querySelectorAll(".nav-link").forEach((link) => {
+    link.addEventListener("click", () => setMenuOpen(false));
+  });
+
+  document.addEventListener("keydown", (e) => {
+    if (e.key === "Escape") setMenuOpen(false);
+  });
+}
 
 // FAQ accordion functionality
 document.querySelectorAll(".faq-question").forEach((question) => {
@@ -72,6 +83,8 @@ document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
 // Add scroll effect to navbar
 window.addEventListener("scroll", () => {
   const navbar = document.querySelector(".navbar");
+  if (!navbar) return;
+
   if (window.scrollY > 100) {
     navbar.style.background =
       "linear-gradient(135deg, rgba(139, 69, 19, 0.95) 0%, rgba(160, 82, 45, 0.95) 100%)";
