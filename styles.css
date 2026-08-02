@@ -15,7 +15,7 @@
 }
 
 html.has-announcement {
-  --announcement-height: 3rem;
+  --announcement-height: 3.5rem;
 }
 
 html {
@@ -149,6 +149,18 @@ site-navbar {
 .site-announcement strong {
   color: #8b4513;
   font-weight: 600;
+}
+
+.site-announcement a {
+  color: #8b4513;
+  font-weight: 600;
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+
+.site-announcement a:hover,
+.site-announcement a:focus-visible {
+  color: #a0522d;
 }
 
 .site-announcement__dismiss {
@@ -681,11 +693,11 @@ gallery-item {
 /* Responsive design */
 @media screen and (max-width: 768px) {
   html.has-announcement {
-    --announcement-height: 4.25rem;
+    --announcement-height: 5.5rem;
   }
 
   .site-announcement p {
-    font-size: 0.88rem;
+    font-size: 0.85rem;
     padding-right: 0.25rem;
   }
 
