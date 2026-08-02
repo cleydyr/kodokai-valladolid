@@ -124,6 +124,7 @@ document.addEventListener("DOMContentLoaded", () => {
     observer.observe(el);
   });
 });
+
 // Carousel functionality
 let currentSlideIndex = 0;
 const slides = document.querySelectorAll(".carousel-slide");
