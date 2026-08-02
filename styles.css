@@ -304,6 +304,14 @@ site-navbar {
 }
 
 /* Gallery page */
+site-gallery {
+  display: block;
+}
+
+gallery-item {
+  display: contents;
+}
+
 .gallery-section {
   margin-bottom: 2rem;
 }
@@ -328,6 +336,21 @@ site-navbar {
   transform: translateY(-4px);
 }
 
+.gallery-trigger {
+  display: block;
+  width: 100%;
+  padding: 0;
+  border: none;
+  background: none;
+  cursor: zoom-in;
+  line-height: 0;
+}
+
+.gallery-trigger:focus-visible {
+  outline: 3px solid #dc143c;
+  outline-offset: -3px;
+}
+
 .gallery-item img {
   width: 100%;
   height: 220px;
@@ -340,6 +363,126 @@ site-navbar {
   color: #8b4513;
   font-size: 1rem;
   font-weight: 500;
+}
+
+/* Gallery lightbox */
+.lightbox {
+  position: relative;
+  width: min(96vw, 1200px);
+  max-width: 96vw;
+  max-height: 96vh;
+  margin: auto;
+  padding: 0;
+  border: none;
+  background: transparent;
+  overflow: visible;
+}
+
+.lightbox::backdrop {
+  background: rgba(20, 12, 8, 0.88);
+}
+
+.lightbox[open] {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.lightbox-figure {
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 100%;
+  max-height: 96vh;
+}
+
+.lightbox-image {
+  display: block;
+  max-width: min(92vw, 1100px);
+  max-height: calc(96vh - 3.5rem);
+  width: auto;
+  height: auto;
+  object-fit: contain;
+  border-radius: 4px;
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.45);
+}
+
+.lightbox-caption {
+  margin-top: 0.85rem;
+  color: #f8f6f3;
+  font-size: 1rem;
+  font-weight: 500;
+  text-align: center;
+  text-shadow: 0 1px 4px rgba(0, 0, 0, 0.5);
+}
+
+.lightbox-close,
+.lightbox-nav {
+  position: absolute;
+  z-index: 2;
+  border: none;
+  background: rgba(248, 246, 243, 0.12);
+  color: #f8f6f3;
+  cursor: pointer;
+  transition: background 0.2s ease;
+  line-height: 1;
+}
+
+.lightbox-close:hover,
+.lightbox-nav:hover {
+  background: rgba(220, 20, 60, 0.85);
+}
+
+.lightbox-close:focus-visible,
+.lightbox-nav:focus-visible {
+  outline: 2px solid #f8f6f3;
+  outline-offset: 2px;
+}
+
+.lightbox-close {
+  top: -0.25rem;
+  right: -0.25rem;
+  width: 2.75rem;
+  height: 2.75rem;
+  border-radius: 50%;
+  font-size: 1.75rem;
+}
+
+.lightbox-nav {
+  top: 50%;
+  transform: translateY(-50%);
+  width: 2.75rem;
+  height: 2.75rem;
+  border-radius: 50%;
+  font-size: 2rem;
+}
+
+.lightbox-prev {
+  left: -0.5rem;
+}
+
+.lightbox-next {
+  right: -0.5rem;
+}
+
+@media (max-width: 700px) {
+  .lightbox-close {
+    top: 0.5rem;
+    right: 0.5rem;
+  }
+
+  .lightbox-prev {
+    left: 0.25rem;
+  }
+
+  .lightbox-next {
+    right: 0.25rem;
+  }
+
+  .lightbox-nav {
+    background: rgba(20, 12, 8, 0.45);
+  }
 }
 
 /* Contact layout */
@@ -1037,16 +1180,24 @@ site-navbar {
   flex-shrink: 0;
 }
 
-.schedule-dot.schedule-class-aikido {
-  background-color: #c41e3a;
-}
-
 .schedule-dot.schedule-class-kids {
-  background-color: #1e5f9e;
+  background-color: #6b3fa0;
 }
 
-.schedule-dot.schedule-class-weapons {
-  background-color: #7c2d8a;
+.schedule-dot.schedule-class-iniciacion {
+  background-color: #2a7a6a;
+}
+
+.schedule-dot.schedule-class-basico {
+  background-color: #c45c26;
+}
+
+.schedule-dot.schedule-class-adultos-basico {
+  background-color: #c45a7a;
+}
+
+.schedule-dot.schedule-class-medio {
+  background-color: #c41e3a;
 }
 
 .schedule-dot.schedule-class-meditation {
@@ -1121,20 +1272,38 @@ site-navbar {
 
 .schedule-class {
   font-weight: 600;
-  display: inline-block;
+  display: inline-flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.15rem;
   max-width: 14rem;
 }
 
-.schedule-class-aikido {
-  color: #b91c3c;
+.schedule-level {
+  display: block;
+  font-weight: 500;
+  font-size: 0.8em;
+  opacity: 0.9;
 }
 
 .schedule-class-kids {
-  color: #1e5f9e;
+  color: #6b3fa0;
 }
 
-.schedule-class-weapons {
-  color: #7c2d8a;
+.schedule-class-iniciacion {
+  color: #2a7a6a;
+}
+
+.schedule-class-basico {
+  color: #c45c26;
+}
+
+.schedule-class-adultos-basico {
+  color: #c45a7a;
+}
+
+.schedule-class-medio {
+  color: #c41e3a;
 }
 
 .schedule-class-meditation {
