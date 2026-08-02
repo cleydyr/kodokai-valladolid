@@ -45,7 +45,7 @@ class SiteNavbar extends HTMLElement {
     showAnnouncement
       ? `<aside class="site-announcement" role="status">
     <div class="site-announcement__inner">
-      <p>Durante el mes de <strong>agosto</strong> el Dojo permanecerá cerrado. ¡Volvemos en <strong>septiembre</strong>! Mientras tanto, puedes llamarnos o escribirnos por WhatsApp — más info en <a href="contact.html">Contacto</a>.</p>
+      <p><span class="site-announcement__label">Aviso</span> Durante el mes de <strong>agosto</strong> el Dojo permanecerá cerrado. ¡Volvemos en <strong>septiembre</strong>! Mientras tanto, puedes llamarnos o escribirnos por WhatsApp — más info en <a href="contact.html">Contacto</a>.</p>
       <button type="button" class="site-announcement__dismiss" aria-label="Cerrar aviso">
         <span aria-hidden="true">&times;</span>
       </button>
