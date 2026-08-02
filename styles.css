@@ -7,7 +7,15 @@
 
 :root {
   --nav-bar-height: 70px;
-  --nav-offset: calc(var(--nav-bar-height) + env(safe-area-inset-top, 0px));
+  --announcement-height: 0px;
+  --nav-offset: calc(
+    var(--nav-bar-height) + var(--announcement-height) +
+      env(safe-area-inset-top, 0px)
+  );
+}
+
+html.has-announcement {
+  --announcement-height: 3rem;
 }
 
 html {
@@ -104,6 +112,70 @@ site-navbar {
 .nav-link:hover::after,
 .nav-link.active::after {
   width: 100%;
+}
+
+/* Summer closure announcement */
+.site-announcement {
+  position: fixed;
+  top: calc(var(--nav-bar-height) + env(safe-area-inset-top, 0px));
+  left: 0;
+  width: 100%;
+  z-index: 999;
+  background: linear-gradient(135deg, #f3e6d4 0%, #efe0c8 100%);
+  border-bottom: 1px solid rgba(139, 69, 19, 0.18);
+  box-shadow: 0 2px 8px rgba(44, 36, 24, 0.06);
+}
+
+.site-announcement__inner {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0.55rem 2.75rem 0.55rem 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.75rem;
+  min-height: var(--announcement-height);
+  position: relative;
+}
+
+.site-announcement p {
+  margin: 0;
+  font-size: 0.95rem;
+  line-height: 1.35;
+  color: #4a3728;
+  text-align: center;
+}
+
+.site-announcement strong {
+  color: #8b4513;
+  font-weight: 600;
+}
+
+.site-announcement__dismiss {
+  position: absolute;
+  right: 12px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 36px;
+  height: 36px;
+  border: none;
+  border-radius: 50%;
+  background: transparent;
+  color: #6b5344;
+  font-size: 1.5rem;
+  line-height: 1;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+.site-announcement__dismiss:hover,
+.site-announcement__dismiss:focus-visible {
+  background-color: rgba(139, 69, 19, 0.12);
+  color: #8b4513;
+  outline: none;
 }
 
 /* Hamburger menu */
@@ -608,6 +680,19 @@ gallery-item {
 
 /* Responsive design */
 @media screen and (max-width: 768px) {
+  html.has-announcement {
+    --announcement-height: 4.25rem;
+  }
+
+  .site-announcement p {
+    font-size: 0.88rem;
+    padding-right: 0.25rem;
+  }
+
+  .site-announcement__inner {
+    padding-right: 2.5rem;
+  }
+
   .nav-menu {
     position: fixed;
     left: -100%;
