@@ -43,7 +43,8 @@ body.nav-open {
 }
 
 /* Navigation */
-site-navbar {
+site-navbar,
+site-footer {
   display: contents;
 }
 
