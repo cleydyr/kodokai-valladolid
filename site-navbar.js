@@ -10,8 +10,6 @@ const NAV_ITEMS = [
   { id: "contact", href: "contact.html", label: "Contacto" },
 ];
 
-const ANNOUNCEMENT_DISMISS_KEY = "kodokai-august-closure-dismissed";
-
 class SiteNavbar extends HTMLElement {
   connectedCallback() {
     const active = this.getAttribute("active") || "";
@@ -22,8 +20,6 @@ class SiteNavbar extends HTMLElement {
           <a href="${item.href}" class="nav-link${activeClass}"${ariaCurrent}>${item.label}</a>
         </li>`;
     }).join("");
-
-    const showAnnouncement = !sessionStorage.getItem(ANNOUNCEMENT_DISMISS_KEY);
 
     this.innerHTML = `
   <nav class="navbar" aria-label="Principal">
@@ -40,29 +36,7 @@ class SiteNavbar extends HTMLElement {
         <span class="bar" aria-hidden="true"></span>
       </button>
     </div>
-  </nav>
-  ${
-    showAnnouncement
-      ? `<aside class="site-announcement" role="status">
-    <div class="site-announcement__inner">
-      <p><span class="site-announcement__label">Aviso</span> Durante el mes de <strong>agosto</strong> el Dojo permanecerá cerrado. ¡Volvemos en <strong>septiembre</strong>! Mientras tanto, puedes llamarnos o escribirnos por WhatsApp — más info en <a href="contact.html">Contacto</a>.</p>
-      <button type="button" class="site-announcement__dismiss" aria-label="Cerrar aviso">
-        <span aria-hidden="true">&times;</span>
-      </button>
-    </div>
-  </aside>`
-      : ""
-  }`;
-
-    if (showAnnouncement) {
-      document.documentElement.classList.add("has-announcement");
-      const dismissBtn = this.querySelector(".site-announcement__dismiss");
-      dismissBtn?.addEventListener("click", () => {
-        sessionStorage.setItem(ANNOUNCEMENT_DISMISS_KEY, "1");
-        this.querySelector(".site-announcement")?.remove();
-        document.documentElement.classList.remove("has-announcement");
-      });
-    }
+  </nav>`;
   }
 }
 
