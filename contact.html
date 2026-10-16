@@ -80,9 +80,20 @@
               allowfullscreen="" loading="lazy"
               referrerpolicy="no-referrer-when-downgrade"></iframe>
           </div>
+
+          <section class="place-reviews" aria-labelledby="reviews-heading">
+            <h3 id="reviews-heading">Reseñas</h3>
+            <p>Opiniones publicadas en Google sobre el dojo.</p>
+            <button type="button" class="cta-button reviews-load" id="reviews-load">Ver reseñas</button>
+            <div id="reviews-panel" class="reviews-panel" hidden></div>
+            <p id="reviews-status" class="reviews-status" role="status" hidden></p>
+            <p id="reviews-fallback" class="reviews-fallback" hidden>
+              <a href="https://search.google.com/local/reviews?placeid=ChIJRYAgduZtRw0RxYI_k3cfktM"
+                rel="noopener noreferrer" target="_blank">Leer todas las reseñas en Google</a>
+            </p>
+          </section>
         </section>
       </div>
-
     </div>
   </main>
 
@@ -90,6 +101,7 @@
 
   <script src="site-navbar.js"></script>
   <script src="site-footer.js"></script>
+  <script src="site-reviews.js"></script>
   <script src="script.js"></script>
 </body>
 
