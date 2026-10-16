@@ -524,6 +524,63 @@ gallery-item {
   border: 0;
 }
 
+.place-reviews {
+  margin-top: 2rem;
+}
+
+.place-reviews h3 {
+  margin-top: 0;
+}
+
+.reviews-load {
+  border: 0;
+  cursor: pointer;
+  font-family: Georgia, serif;
+  color: #fff;
+}
+
+.reviews-load[hidden] {
+  display: none;
+}
+
+.reviews-load:disabled {
+  cursor: wait;
+  opacity: 0.75;
+  transform: none;
+}
+
+.reviews-panel {
+  width: min(100%, 400px);
+  margin-top: 1.5rem;
+}
+
+.reviews-panel gmp-place-details {
+  display: block;
+  width: 100%;
+  height: 32rem;
+  border: none;
+  border-radius: 10px;
+  color-scheme: light;
+  --gmp-mat-color-surface: #f8f6f3;
+  --gmp-mat-color-on-surface: #2c2c2c;
+  --gmp-mat-color-on-surface-variant: #5c4a3a;
+  --gmp-mat-color-primary: #8b4513;
+  --gmp-mat-font-family: Georgia, "Times New Roman", serif;
+}
+
+.reviews-status {
+  margin-top: 1rem;
+  color: #8b1e1e;
+}
+
+.reviews-fallback {
+  margin-top: 1rem;
+}
+
+.reviews-fallback a {
+  color: #8b4513;
+}
+
 /* Contact form */
 .contact-form {
   background: linear-gradient(135deg, #f8f6f3, #ffffff);
